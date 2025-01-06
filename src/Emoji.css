@@ -1,3 +1,9 @@
 .emoji {
-    font-size: 5em;
+    .face {
+        font-size: 5em;
+    }
+    .actions {
+        display: flex;
+        flex-direction: column;
+    }
 }
