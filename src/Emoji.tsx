@@ -23,27 +23,6 @@ export default function Emoji (){
         setEstado("ski");
     }
 
-    //funcao para ciclar emojis
-    function toNext(){
-        const states = ["clear", "feminine", "hiking", "ski"];
-        if (estado == "clear")
-        {
-            setEstado("feminine");
-        }
-        else if (estado == "feminine")
-        {
-            setEstado("hiking");
-        }
-        else if (estado == "hiking")
-        {
-            setEstado("ski");
-        }
-        else if (estado == "ski")
-        {
-            setEstado("clear");
-        }
-    }
-
     //funcao para ciclar correta
     function cicle() {
         switch (estado) {
