@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Emoji />
-      <Atributo />
+      <Atributo icone="❤️"/>
     </>
   );
 }
