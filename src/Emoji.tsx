@@ -1,52 +1,54 @@
 import "./Emoji.css";
 import { useState } from "react";
 
+
+
 const EMOJIS = new Map <string, string> ([
-    ["feminine", "👢"],
-    ["hiking", "🥾"],
-    ["ski", "🎿"],
+    ["alive", "😃"],
+    ["dead", "😵"],
+    ["sick", "🤒"],
 ]);
-// EMOJIS.set("feminina,"👢");
+
 
 export default function Emoji (){
 
     //utilização do useState
     const [estado, setEstado] = useState("clear");
 
-    function toFeminine(){
-        setEstado("feminine");
+    function toAlive(){
+        setEstado("alive");
     }
-    function toHiking(){
-        setEstado("hiking");
+    function toDead(){
+        setEstado("dead");
     }
-    function toSki(){
-        setEstado("ski");
+    function toSick(){
+        setEstado("sick");
     }
 
     //funcao para ciclar correta
     function cicle() {
         switch (estado) {
             case "clear":
-                setEstado("feminine");
+                setEstado("alive");
                 break;
-            case "feminine":
-                setEstado("hiking");
+            case "alive":
+                setEstado("dead");
                 break;
-            case "hiking":
-                setEstado("ski");
+            case "dead":
+                setEstado("sick");
                 break;
-            case "ski":
+            case "sick":
                 setEstado("clear");
                 break;
         }
     }
 
     return <div className="emoji"> 
-        <div className="face">{EMOJIS.get(estado) || "🪇"}</div> 
+        <div className="face">{EMOJIS.get(estado) || "🐲"}</div> 
         <div className="actions">
-            <button onClick={toFeminine}> Bota Feminina </button>
-            <button onClick={toHiking}> Bota de Escalada </button>
-            <button onClick={toSki}> Bota de Ski </button>
+            <button onClick={toAlive}> Bicho Vivo </button>
+            <button onClick={toDead}> Bicho Morto </button>
+            <button onClick={toSick}> Bicho Doente </button>
             <button onClick={cicle}> Próximo </button>
         </div>
     </div>
