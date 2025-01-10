@@ -44,8 +44,8 @@ export default function Emoji (){
     }
 
     return <div className="emoji"> 
-        <div className="face">{EMOJIS.get(estado) || "🐲"}</div> 
-        <div className="actions">
+        <div className="situacao">{EMOJIS.get(estado) || "🐲"}</div> 
+        <div className="acoes">
             <button onClick={toAlive}> Bicho Vivo </button>
             <button onClick={toDead}> Bicho Morto </button>
             <button onClick={toSick}> Bicho Doente </button>

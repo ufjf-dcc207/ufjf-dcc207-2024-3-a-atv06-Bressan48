@@ -7,17 +7,17 @@ type AtributoProps =
 }
 export default function Atributo ({icone} : AtributoProps ){
 
-    const [valor, setValor] = useState(3);
+    const [valor, setValor] = useState(5);
     
-    function onMaisClick()
+    function onMenosClick()
     {
-        if(valor == 5)
+        if(valor == 0)
         {
-            setValor(0);
+            setValor(5);
         }
         else
         {
-            setValor(valor + 1);
+            setValor(valor - 1);
         }
 
     }
@@ -28,7 +28,7 @@ export default function Atributo ({icone} : AtributoProps ){
     return <div className="atributo"> 
         <span>{icone.repeat(valor)}</span>
         <span className="inativo">{icone.repeat(5-valor)}</span>
-        <button onClick={onMaisClick}>+</button>
+        <button onClick={onMenosClick}>-</button>
     </div>
 
 }

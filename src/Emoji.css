@@ -1,8 +1,12 @@
 .emoji {
-    .face {
+
+    display: grid;
+    grid-template-columns: repeat(1fr);
+
+    .situacao {
         font-size: 5em;
     }
-    .actions {
+    .acoes {
         display: flex;
         flex-direction: column;
     }

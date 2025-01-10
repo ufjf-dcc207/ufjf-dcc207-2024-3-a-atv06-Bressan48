@@ -8,6 +8,9 @@ function App() {
     <>
       <Emoji />
       <Atributo icone="❤️"/>
+      <Atributo icone="⚡"/>
+      <Atributo icone="🍗"/>
+      <Atributo icone="🥤"/>
     </>
   );
 }
